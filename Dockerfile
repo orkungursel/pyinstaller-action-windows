@@ -7,6 +7,9 @@ RUN set -x \
 # Add git to path
 ENV PATH="/usr/bin/git:${PATH}"
 
+# Install git
+RUN git --version
+
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
