@@ -4,6 +4,9 @@ RUN set -x \
     && apt-get install git -y \
     && apt-get clean
 
+# Add git to path
+ENV PATH="/usr/bin/git:${PATH}"
+
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
